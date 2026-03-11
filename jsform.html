@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="phone">Phone no.: </label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="confirmPassword">Confirm Password :</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+         
+        <label for="gender">Gender :</label>
+        <select name="gender" id="gender" required >
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="skills" >Skills :</label>
+        <input type="checkbox" id="skills" name="skills" value="FrontEnd-Developer">
+        <input type="checkbox" id="skills" name="skills" value="BackEnd-Developer">
+        <input type="checkbox" id="skills" name="skills" value="AI-Developer">
+        <input type="checkbox" id="skills" name="skills" value="Java-Developer">
+        
+        
+        
+
+        <button type="submit">Submit</button>
+    </form>
+    
+
+
+    <script src="form.js"></script>
+</body>
+</html>
