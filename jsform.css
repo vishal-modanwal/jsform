@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #424040;
+}
+
+
+#container{
+    background-color: aqua;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
