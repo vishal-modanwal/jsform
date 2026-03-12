@@ -20,8 +20,9 @@ form.addEventListener("submit" , function(e){
 //    }     
    const validName = nameChecker(name);
    const validEmail = validateEmail(email);
+   const validNumber = numberValidate(phone);
 
-  let valid = validName && validEmail ;
+  let valid = validName && validEmail && validEmail;
     
     
 
@@ -65,12 +66,29 @@ function validateEmail(email){
 function numberValidate(phone){
     const phoneRegex = /^[0-9]{10}$/;
     if(!phoneRegex.test(phone)){
-      errorHappen("Phone must be 10 digits")
+      errorHappen("Phone must be 10 digits");
        return false;
     }
     return true;
   }
 
+function confirmPassword(password , confirmPassword){
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (!password || !confirmPassword) {
+  errorHappen("Password fields cannot be empty.");
+  return false;
+}
+ if (!passwordRegex.test(password)) {
+    errorHappen("Password must contain 8+ characters, including uppercase, lowercase, number, and special character.");
+    return false;
+  }
+
+  if (password !== confirmPassword) {
+    errorHappen("Password and confirm password do not match.");
+    return false;
+  }
+  return true;
+}
 
 function errorHappen(err){
     error.textContent = err;
