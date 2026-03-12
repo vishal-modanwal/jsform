@@ -10,7 +10,7 @@ body{
 
 
 #container{
-    background-color: aqua;
+    background-color: rgb(168, 240, 240);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -26,4 +26,9 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+#error{
+    color: red;
+    font-size: small;
 }
