@@ -2,7 +2,7 @@ let form = document.querySelector("form");
 let name = document.querySelector("#name").value;
 let email = document.querySelector("#email").value;
 let password =document.querySelector("#password").value;
-let confirmPassword = document.querySelector("#confirmPassword").value;
+let confrmPassword = document.querySelector("#confirmPassword").value;
 let phone = document.querySelector("#phone").value;
 let error = document.querySelector("#error");
 
@@ -21,8 +21,9 @@ form.addEventListener("submit" , function(e){
    const validName = nameChecker(name);
    const validEmail = validateEmail(email);
    const validNumber = numberValidate(phone);
+   const validPassword = confirmPassword(password , confrmPassword);
 
-  let valid = validName && validEmail && validEmail;
+  let valid = validName && validEmail && validNumber && validPassword;
     
     
 
